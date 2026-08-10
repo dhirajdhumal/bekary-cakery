@@ -1,0 +1,74 @@
+body{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* Header Or Navbar */
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+}
+
+.logo{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.nav-links{
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+ul{
+    list-style: none;
+
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px
+}
+
+nav a:hover{
+    color: Red;
+}
+
+/* Hero Section */
+.hero{
+    background-image: url(/Images/Bakery\ Background.png);
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#hero-button{
+    background-color: rgb(205, 146, 72);
+    border: none;
+    font-size: large;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+#hero-button:hover{
+    background-color: rgb(167, 117, 56);
+}
+
+.hero h2{
+    margin-top: 300px;
+    text-shadow: 0px 0px 10px rgb(167, 117, 56);
+    font-size: 30px;
+}
