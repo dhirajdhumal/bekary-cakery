@@ -222,3 +222,305 @@ body {
 .product-button:hover {
     background-color: rgb(167, 117, 56);
 }
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 20px 5%;
+    text-align: center;
+    background-color: #fff8f0;
+}
+
+.why-choose-us h2 {
+    font-size: 32px;
+    color: #4b2e1e;
+}
+
+.why-description {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.why-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.why-card {
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    padding: 20px;
+}
+
+.why-card:hover {
+    transform: translateY(-1px);
+}
+
+.why-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.why-card h3 {
+    color: #4b2e1e;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Special Offers Section */
+.special-offer{
+    /* min-height: 350px; */
+    padding: 30px 5%;
+
+    background-image: url(/Images/Offers/SpecialOfffer.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    
+
+    border-radius: 5px;
+    margin: 50px
+}
+
+/* .special-offer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.45);
+} */
+
+.offer-content {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-left: 40px;
+  
+    z-index: 1;
+
+    color: white;
+    max-width: 700px;
+}
+
+.offer-label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.offer-content h2 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.offer-description {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.offer-content h3 {
+    font-size: 34px;
+    color: #ffd28a;
+    margin: 15px 0 5px;
+}
+
+.offer-validity {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.offer-button {
+    display: inline-block;
+
+    background-color: rgb(205, 146, 72);
+    color: white;
+
+    text-decoration: none;
+
+    padding: 11px 25px;
+    border-radius: 5px;
+
+    font-size: 19px;
+    font-weight: bold;
+
+    transition: background-color 0.3s ease;
+}
+
+.offer-button:hover {
+    background-color: rgb(167, 117, 56);
+}
+
+/* Customer Reviews Section */
+.customer-reviews {
+    padding: 20px 5%;
+    text-align: center;
+    background-color: #fff8f0;
+}
+
+.customer-reviews h2 {
+    font-size: 32px;
+    color: #4b2e1e;
+    margin-bottom: 20px;
+}
+
+.review-description {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.review-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.review-card {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    padding: 20px;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-rating {
+    color: #ffb031;
+  
+}
+
+.review-card h3{
+    color: #4b2e1e;
+    font-size: 20px;
+}
+
+.review-text {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #3b2418;
+    color: white;
+    padding-top: 50px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    width: 90%;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 40px;
+}
+
+.footer-section {
+    width: 220px;
+}
+
+.footer-section h3 {
+    color: #f5c27a;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    color: #ddd;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer-logo h3 {
+    margin: 0;
+    color: white;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #f5c27a;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-links a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #f5c27a;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding: 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #bbb;
+    font-size: 14px;
+}
