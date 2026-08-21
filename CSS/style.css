@@ -252,7 +252,7 @@ body {
     width: 250px;
     background-color: white;
     border-radius: 10px;
-    overflow: hidden; 
+    overflow: hidden;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
     padding: 20px;
@@ -281,7 +281,7 @@ body {
 }
 
 /* Special Offers Section */
-.special-offer{
+.special-offer {
     /* min-height: 350px; */
     padding: 30px 5%;
 
@@ -294,7 +294,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    
+
 
     border-radius: 5px;
     margin: 50px
@@ -312,11 +312,11 @@ body {
     margin-top: 70px;
     margin-bottom: 70px;
     margin-left: 40px;
-  
+
     z-index: 1;
 
     color: white;
-    max-width: 700px;
+    max-width: 500px;
 }
 
 .offer-label {
@@ -409,10 +409,10 @@ body {
 
 .review-rating {
     color: #ffb031;
-  
+
 }
 
-.review-card h3{
+.review-card h3 {
     color: #4b2e1e;
     font-size: 20px;
 }
@@ -523,4 +523,279 @@ body {
     margin: 0;
     color: #bbb;
     font-size: 14px;
+}
+
+
+/* ----------------------------------------------Menu Page---------------------------------------------------------- */
+/* Menu Banner */
+
+.menu-banner {
+    height: 250px;
+    background-image: url("/Images/MenuPage/MenuBackground.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.menu-banner h2 {
+    font-size: 50px;
+    margin: 0 0 10px;
+    text-shadow: 2px 2px 8px black;
+}
+
+.menu-banner p {
+    font-size: 18px;
+    margin: 0;
+    text-shadow: 1px 1px 5px black;
+}
+
+/* Menu Categories */
+
+.menu-categories {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: rgb(255, 248, 240);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    margin:20px
+}
+
+.menu-categories h2 {
+    font-size: 32px;
+    color: #4b2e1e;
+    margin-bottom: 10px;
+}
+
+.menu-category-description {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.menu-category-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.menu-category-button {
+    display: inline-block;
+
+    padding: 10px 22px;
+
+    background-color: white;
+    color: #4b2e1e;
+
+    border: 2px solid #cd9248;
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+.menu-category-button:hover {
+    background-color: #cd9248;
+    color: white;
+}
+
+.menu-category-button.active {
+    background-color: #cd9248;
+    color: white;
+}
+
+
+/* ==================== Delicious Products Section ==================== */
+
+.delicious-products {
+    padding: 50px 5%;
+    text-align: center;
+    background-color: #fff8f0;
+}
+
+.delicious-products>h2 {
+    font-size: 34px;
+    color: #4b2e1e;
+    margin: 0 0 10px;
+}
+
+.delicious-products-description {
+    color: #666;
+    font-size: 17px;
+    margin: 0 0 50px;
+}
+
+
+/* ==================== Product Category ==================== */
+
+.product-category {
+    margin-bottom: 65px;
+}
+
+.product-category>h2 {
+    font-size: 28px;
+    color: #4b2e1e;
+
+    margin: 0 0 30px;
+
+    position: relative;
+}
+
+
+/* Small decorative line below category heading */
+
+.product-category>h2::after {
+    content: "";
+
+    display: block;
+
+    width: 50px;
+    height: 3px;
+
+    background-color: rgb(205, 146, 72);
+
+    margin: 10px auto 0;
+
+    border-radius: 5px;
+}
+
+.delicious-products-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    max-width: 1250px;
+    margin: auto;
+}
+
+.delicious-product-card {
+    width: 280px;
+
+    background-color: white;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Card Hover */
+
+.delicious-product-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ==================== Product Image ==================== */
+
+.delicious-product-card img {
+    width: 100%;
+    height: 210px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ==================== Product Information ==================== */
+
+.delicious-product-info {
+    padding: 18px;
+}
+
+
+/* Product Name */
+
+.delicious-product-info h3 {
+    color: #4b2e1e;
+
+    font-size: 20px;
+
+    margin: 0 0 10px;
+
+    min-height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ==================== Rating ==================== */
+
+.delicious-product-rating {
+    color: #f5a623;
+
+    font-size: 17px;
+
+    letter-spacing: 2px;
+
+    margin: 8px 0;
+}
+
+
+/* ==================== Price ==================== */
+
+.delicious-product-price {
+    color: #8b4513;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin: 10px 0 15px;
+}
+
+
+/* ==================== Add To Cart Button ==================== */
+
+.delicious-product-button {
+    display: inline-block;
+
+    background-color: rgb(205, 146, 72);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    padding: 10px 20px;
+
+    border-radius: 6px;
+
+    transition: background-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+
+/* Button Hover */
+
+.delicious-product-button:hover {
+    background-color: rgb(167, 117, 56);
+
+    transform: translateY(-2px);
 }
