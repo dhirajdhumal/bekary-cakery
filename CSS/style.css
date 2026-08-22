@@ -822,3 +822,425 @@ body {
 
     transform: translateY(-2px);
 }
+
+
+/* --------------------------------------------------------------About Us Page-------------------------------------------------------------------------- */
+
+/* ==================== About Banner ==================== */
+
+.about-banner {
+    height: 250px;
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.9);
+
+    background-image: url("/Images/AboutPage/Banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+.about-banner h1 {
+    font-size: 42px;
+
+    margin: 0 0 10px;
+
+    text-shadow: 2px 2px 8px black;
+}
+
+.about-banner p {
+    font-size: 18px;
+
+    margin: 0;
+
+    text-shadow: 1px 1px 5px black;
+}
+
+/* ==================== Our Story ==================== */
+
+.our-story {
+    display: flex;
+
+    align-items: center;
+
+    gap: 60px;
+
+    padding: 70px 8%;
+
+    background-color: #fff8f0;
+}
+
+
+/* Story Image */
+
+.story-image {
+    width: 50%;
+}
+
+.story-image img {
+    width: 100%;
+
+    height: 380px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Story Content */
+
+.story-content {
+    width: 50%;
+}
+
+.story-content h2 {
+    color: #4b2e1e;
+
+    font-size: 32px;
+
+    margin: 0 0 20px;
+}
+
+.story-content p {
+    color: #666;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+/* ==================== Why Choose Us ==================== */
+
+.why-choose-us {
+    padding: 20px 5%;
+
+    text-align: center;
+
+    background-color: white;
+}
+
+.why-choose-us h2 {
+    font-size: 32px;
+
+    color: #4b2e1e;
+
+    margin: 0 0 10px;
+}
+
+.why-choose-description {
+    color: #666;
+
+    font-size: 17px;
+
+    margin: 0 0 40px;
+}
+
+
+/* Feature Container */
+
+.why-choose-container {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin: auto;
+}
+
+
+/* Feature Card */
+
+.why-choose-card {
+    width: 250px;
+
+    padding: 30px 20px;
+
+    background-color: #fff8f0;
+
+    border-radius: 10px;
+
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+/* Card Hover */
+
+.why-choose-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+
+/* Icon */
+
+.why-choose-icon {
+    font-size: 35px;
+
+    color: rgb(205, 146, 72);
+
+    margin-bottom: 15px;
+}
+
+
+/* Card Heading */
+
+.why-choose-card h3 {
+    color: #4b2e1e;
+
+    font-size: 20px;
+
+    margin: 0 0 10px;
+}
+
+
+/* Card Description */
+
+.why-choose-card p {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* ==================== Our Baking Philosophy ==================== */
+
+.baking-philosophy {
+    margin-top: 50px;
+    display: flex;
+
+    align-items: center;
+
+    gap: 60px;
+
+    padding: 70px 8%;
+
+    background-color: #fff8f0;
+}
+
+
+/* Philosophy Content */
+
+.philosophy-content {
+    width: 50%;
+}
+
+.philosophy-content h2 {
+    color: #4b2e1e;
+
+    font-size: 32px;
+
+    margin: 0 0 20px;
+}
+
+.philosophy-content p {
+    color: #666;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+/* Philosophy Image */
+
+.philosophy-image {
+    width: 50%;
+}
+
+.philosophy-image img {
+    width: 100%;
+
+    height: 380px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ==================== Our Specialties ==================== */
+
+.our-specialties {
+    padding: 50px 5%;
+    text-align: center;
+    background-color: white;
+}
+
+.our-specialties h2 {
+    color: #4b2e1e;
+    font-size: 32px;
+    margin: 0 0 10px;
+}
+
+.specialties-description {
+    color: #666;
+    font-size: 17px;
+    margin: 0 0 40px;
+}
+
+
+/* Specialties Container */
+
+.specialties-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Specialty Item */
+
+.specialty-item {
+    width: 300px;
+
+    background-color: #fff8f0;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+/* Hover */
+
+.specialty-item:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+
+/* Specialty Image */
+
+.specialty-icon {
+    width: 100%;
+    height: 250px;
+
+    overflow: hidden;
+}
+
+.specialty-icon img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Image Hover */
+
+.specialty-item:hover .specialty-icon img {
+    transform: scale(1.05);
+}
+
+
+/* Specialty Heading */
+
+.specialty-item h3 {
+    color: #4b2e1e;
+
+    font-size: 20px;
+
+    margin: 18px 15px 10px;
+}
+
+
+/* Specialty Description */
+
+.specialty-item p {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin: 0 20px 22px;
+}
+
+
+
+
+/* ==================== About CTA ==================== */
+
+.about-cta {
+    padding: 45px 5%;
+    text-align: center;
+
+    background-color: #4b2e1e;
+    color: white;
+}
+
+.about-cta h2 {
+    font-size: 30px;
+    margin: 0 0 8px;
+}
+
+.about-cta p {
+    font-size: 16px;
+    margin: 0 0 22px;
+    line-height: 1.5;
+}
+
+.about-cta-button {
+    display: inline-block;
+
+    padding: 10px 22px;
+
+    background-color: rgb(205, 146, 72);
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.about-cta-button:hover {
+    background-color: rgb(167, 117, 56);
+
+    transform: translateY(-2px);
+}
