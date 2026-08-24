@@ -1,12 +1,527 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
+
+    <title>Cart - Bakery Cakery</title>
+
     <link rel="stylesheet" href="/CSS/style.css">
+
+    <script src="https://kit.fontawesome.com/de2326f379.js" crossorigin="anonymous"></script>
+
 </head>
+
+
 <body>
+
+
+    <!-- ==================== Navbar ==================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <a href="index.html">
+
+                    <img src="/Images/Bakery Logo.png" height="65px" alt="Bakery Cakery Logo">
+
+                </a>
+
+                <h3>Bakery Cakery</h3>
+
+            </div>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="products.html">Menu</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About us</a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact us</a>
+                </li>
+
+                <li>
+                    <a href="cart.html">Cart</a>
+                </li>
+
+                <li><a href="login.html">Login</a></li>
+
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==================== Cart Header ==================== -->
+
+    <section class="cart-header">
+
+        <div class="cart-header1">
+
+            <h1>Your Cart</h1>
+
+            <p>
+                Review your delicious selections before checkout.
+            </p>
+        </div>
+
+
+
+    </section>
+
+
+    <!-- ==================== Cart Section ==================== -->
+
+    <section class="cart-section">
+
+        <div class="cart-container">
+
+
+            <!-- ==================== Cart Table ==================== -->
+
+            <div class="cart-table-container">
+
+                <h2>Your Items</h2>
+
+
+                <div class="cart-table-wrapper">
+
+                    <table class="cart-table">
+
+
+                        <!-- Table Header -->
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Product</th>
+
+                                <th>Price</th>
+
+                                <th>Quantity</th>
+
+                                <th>Total</th>
+
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <!-- Table Body -->
+
+                        <tbody>
+
+
+                            <!-- Cart Item 1 -->
+
+                            <tr>
+
+                                <td class="cart-product">
+
+                                    <img src="/Images/Gallery/Cake1.png" alt="Chocolate Celebration Cake">
+
+                                    <div>
+
+                                        <h3>
+                                            Chocolate Celebration Cake
+                                        </h3>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    ₹650
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-quantity">
+
+                                        <button type="button">
+                                            -
+                                        </button>
+
+                                        <span>
+                                            1
+                                        </span>
+
+                                        <button type="button">
+                                            +
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <strong>
+                                        ₹650
+                                    </strong>
+
+                                </td>
+
+
+                                <td>
+
+                                    <button type="button" class="table-remove" aria-label="Remove product">
+
+                                        <i class="fa-solid fa-trash"></i>
+
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Cart Item 2 -->
+
+                            <tr>
+
+                                <td class="cart-product">
+
+                                    <img src="/Images/Gallery/Pastry1.png" alt="Butter Croissant">
+
+                                    <div>
+
+                                        <h3>
+                                            Butter Croissant
+                                        </h3>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    ₹80
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-quantity">
+
+                                        <button type="button">
+                                            -
+                                        </button>
+
+                                        <span>
+                                            2
+                                        </span>
+
+                                        <button type="button">
+                                            +
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <strong>
+                                        ₹160
+                                    </strong>
+
+                                </td>
+
+
+                                <td>
+
+                                    <button type="button" class="table-remove" aria-label="Remove product">
+
+                                        <i class="fa-solid fa-trash"></i>
+
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- Continue Shopping -->
+
+                <a href="products.html" class="continue-shopping">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Continue Shopping
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================== Order Summary ==================== -->
+
+            <div class="cart-summary">
+
+                <h2>Order Summary</h2>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong>
+                        ₹810
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Delivery Fee
+                    </span>
+
+                    <strong>
+                        ₹50
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <div class="summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong>
+                        ₹860
+                    </strong>
+
+                </div>
+
+
+                <button type="button" class="checkout-button">
+
+                    Proceed to Checkout
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== Footer ==================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <!-- Footer About -->
+
+            <div class="footer-section">
+
+                <div class="footer-logo">
+
+                    <img src="/Images/Bakery Logo.png" height="65px" alt="Bakery Cakery Logo">
+
+                    <h3>
+                        Bakery Cakery
+                    </h3>
+
+                </div>
+
+
+                <p>
+
+                    Freshly baked cakes, pastries and sweet treats
+                    made with love for every occasion.
+
+                </p>
+
+            </div>
+
+
+            <!-- Quick Links -->
+
+            <div class="footer-section">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">
+                            Menu
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cart.html">
+                            Cart
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Contact -->
+
+            <div class="footer-section">
+
+                <h3>
+                    Contact Us
+                </h3>
+
+
+                <p>
+                    Lingdeo, Akole, Ahilyanagar,
+                    Maharashtra 422610
+                </p>
+
+
+                <p>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +91 9527791136
+
+                </p>
+
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    bakerycakery@gmail.com
+
+                </p>
+
+            </div>
+
+
+            <!-- Social Media -->
+
+            <div class="footer-section">
+
+                <h3>
+                    Follow Us
+                </h3>
+
+
+                <div class="social-links">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Bakery Cakery.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
     <script src="/Js/script.js"></script>
+
 </body>
+
 </html>
