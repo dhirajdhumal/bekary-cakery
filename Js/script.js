@@ -190,11 +190,18 @@ addToCartButtons.forEach(function(button) {
             card.getElementsByTagName("img")[0].src;
 
 
-        localStorage.setItem("productName", name);
+        // Support multiple cart items
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-        localStorage.setItem("productPrice", price);
+        let existingItem = cart.find(function(item) { return item.name === name; });
 
-        localStorage.setItem("productImg", img);
+        if (existingItem) {
+            existingItem.quantity = (existingItem.quantity || 1) + 1;
+        } else {
+            cart.push({ name: name, price: price, img: img, quantity: 1 });
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
 
 
         alert(name + " added to cart");
@@ -215,30 +222,26 @@ let cartItems =
 
 if (cartItems) {
 
-    let name =
-        localStorage.getItem("productName");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    let price =
-        localStorage.getItem("productPrice");
+    if (cart.length > 0) {
 
-    let img =
-        localStorage.getItem("productImg");
+        cartItems.innerHTML = "";
 
+        cart.forEach(function(item) {
 
-    if (name && price && img) {
-
-        cartItems.innerHTML = `
+            cartItems.innerHTML += `
 
             <tr>
 
                 <td class="cart-product">
 
-                    <img src="${img}" alt="${name}">
+                    <img src="${item.img}" alt="${item.name}">
 
                     <div>
 
                         <h3>
-                            ${name}
+                            ${item.name}
                         </h3>
 
                     </div>
@@ -248,7 +251,7 @@ if (cartItems) {
 
                 <td class="product-price">
 
-                    ${price}
+                    ${item.price}
 
                 </td>
 
@@ -267,7 +270,7 @@ if (cartItems) {
 
 
                         <span>
-                            1
+                            ${item.quantity || 1}
                         </span>
 
 
@@ -288,7 +291,7 @@ if (cartItems) {
 
                     <strong class="product-total">
 
-                        ${price}
+                        ₹${(Number(item.price.replace("₹", "")) * (item.quantity || 1))}
 
                     </strong>
 
@@ -299,7 +302,8 @@ if (cartItems) {
 
                     <button
                         type="button"
-                        class="table-remove">
+                        class="table-remove"
+                        data-name="${item.name}">
 
                         <i class="fa-solid fa-trash"></i>
 
@@ -310,6 +314,9 @@ if (cartItems) {
             </tr>
 
         `;
+
+        });
+
         updateSubtotal();
 
     }
@@ -319,41 +326,37 @@ if (cartItems) {
 
 /* ==================== Quantity ==================== */
 
-let plus =
-    document.querySelectorAll(".quantity-plus");
+document.addEventListener("click", function(event) {
 
-let minus =
-    document.querySelectorAll(".quantity-minus");
-
-
-plus.forEach(function(button) {
-
-    button.addEventListener("click", function() {
-
-        button.previousElementSibling.innerText++;
-
+    if (event.target.classList.contains("quantity-plus")) {
+        let span = event.target.previousElementSibling;
+        span.innerText = Number(span.innerText) + 1;
         updateProductTotal();
+    }
 
-    });
-
-});
-
-
-minus.forEach(function(button) {
-
-    button.addEventListener("click", function() {
-
-        if (
-            button.nextElementSibling.innerText > 1
-        ) {
-
-            button.nextElementSibling.innerText--;
-
+    if (event.target.classList.contains("quantity-minus")) {
+        let span = event.target.nextElementSibling;
+        if (Number(span.innerText) > 1) {
+            span.innerText = Number(span.innerText) - 1;
             updateProductTotal();
-
         }
+    }
 
-    });
+    if (event.target.closest(".table-remove")) {
+        let button = event.target.closest(".table-remove");
+        let row = button.closest("tr");
+        let itemName = button.getAttribute("data-name");
+
+        row.remove();
+
+        // Remove from cart array in localStorage
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart = cart.filter(function(item) { return item.name !== itemName; });
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        updateSubtotal();
+        checkCart();
+    }
 
 });
 
@@ -519,39 +522,6 @@ function updateGrandTotal() {
 }
 
 
-/* ==================== Remove Product ==================== */
-
-let removeButtons =
-    document.querySelectorAll(".table-remove");
-
-
-removeButtons.forEach(function(button) {
-
-    button.addEventListener("click", function() {
-
-        let row =
-            button.closest("tr");
-
-
-        row.remove();
-
-
-        localStorage.removeItem("productName");
-
-        localStorage.removeItem("productPrice");
-
-        localStorage.removeItem("productImg");
-
-
-        updateSubtotal();
-
-        checkCart();
-
-    });
-
-});
-
-
 /* ==================== Empty Cart ==================== */
 
 function checkCart() {
@@ -639,6 +609,25 @@ if (checkoutButton) {
     );
 
 }
+
+/* ==================== Contact Form ==================== */
+
+let contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        alert("Thank you for your message! We will get back to you soon.");
+
+        contactForm.reset();
+
+    });
+
+}
+
 
 /* ==================== Custom Cake ==================== */
 
