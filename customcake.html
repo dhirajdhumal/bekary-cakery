@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Custom Cake - Bakery Cakery</title>
+
+    <link rel="stylesheet" href="/CSS/style.css">
+
+    <script src="https://kit.fontawesome.com/de2326f379.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+    <!-- ==================== Navbar ==================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <a href="index.html">
+                    <img src="/Images/Bakery Logo.png" height="65px" alt="Bakery Cakery Logo">
+                </a>
+
+                <h3>Bakery Cakery</h3>
+
+            </div>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="products.html">Menu</a>
+                </li>
+
+                <li>
+                    <a href="customcake.html">Custom Cake</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About us</a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact us</a>
+                </li>
+
+                <li>
+                    <a href="#" id="loginLogout">Login</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==================== Custom Cake Banner ==================== -->
+
+    <section class="custom-cake-banner">
+
+        <h1>Customize Your Cake</h1>
+
+        <p>
+            Tell us how you want your cake, and we'll create it for you.
+        </p>
+
+    </section>
+
+
+    <!-- ==================== Custom Cake Section ==================== -->
+
+    <section class="custom-cake-section">
+
+        <div class="custom-cake-intro">
+
+            <h2>Create Your Dream Cake 🎂</h2>
+
+            <p>
+                Every celebration is different. Choose your cake details,
+                share your ideas and give us your special instructions.
+            </p>
+
+        </div>
+
+
+        <div class="custom-cake-container">
+
+
+            <!-- ==================== Form ==================== -->
+
+            <div class="custom-cake-form-container">
+
+                <h2>Customize Your Cake</h2>
+
+
+                <form id="customCakeForm">
+
+
+                    <!-- Cake Type -->
+
+                    <div class="custom-form-group">
+
+                        <label for="cakeType">
+                            Cake Type
+                        </label>
+
+                        <select id="cakeType" required>
+
+                            <option value="">
+                                Select cake type
+                            </option>
+
+                            <option value="birthday">
+                                Birthday Cake
+                            </option>
+
+                            <option value="wedding">
+                                Wedding Cake
+                            </option>
+
+                            <option value="anniversary">
+                                Anniversary Cake
+                            </option>
+
+                            <option value="custom">
+                                Custom Celebration Cake
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Flavor -->
+
+                    <div class="custom-form-group">
+
+                        <label for="flavor">
+                            Cake Flavor
+                        </label>
+
+                        <select id="flavor" required>
+
+                            <option value="">
+                                Select flavor
+                            </option>
+
+                            <option value="chocolate">
+                                Chocolate
+                            </option>
+
+                            <option value="vanilla">
+                                Vanilla
+                            </option>
+
+                            <option value="red-velvet">
+                                Red Velvet
+                            </option>
+
+                            <option value="butterscotch">
+                                Butterscotch
+                            </option>
+
+                            <option value="black-forest">
+                                Black Forest
+                            </option>
+
+                            <option value="strawberry">
+                                Strawberry
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Weight -->
+
+                    <div class="custom-form-group">
+
+                        <label for="weight">
+                            Cake Weight
+                        </label>
+
+                        <select id="weight" required>
+
+                            <option value="">
+                                Select weight
+                            </option>
+
+                            <option value="0.5kg">
+                                0.5 KG
+                            </option>
+
+                            <option value="1kg">
+                                1 KG
+                            </option>
+
+                            <option value="1.5kg">
+                                1.5 KG
+                            </option>
+
+                            <option value="2kg">
+                                2 KG
+                            </option>
+
+                            <option value="3kg">
+                                3 KG
+                            </option>
+
+                            <option value="custom">
+                                More than 3 KG
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Shape -->
+
+                    <div class="custom-form-group">
+
+                        <label for="shape">
+                            Cake Shape
+                        </label>
+
+                        <select id="shape" required>
+
+                            <option value="">
+                                Select shape
+                            </option>
+
+                            <option value="round">
+                                Round
+                            </option>
+
+                            <option value="square">
+                                Square
+                            </option>
+
+                            <option value="heart">
+                                Heart
+                            </option>
+
+                            <option value="rectangle">
+                                Rectangle
+                            </option>
+
+                            <option value="custom">
+                                Custom Shape
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Color -->
+
+                    <div class="custom-form-group">
+
+                        <label for="cakeColor">
+                            Color / Theme
+                        </label>
+
+                        <input type="text" id="cakeColor" placeholder="Example: Black and Red">
+
+                    </div>
+
+
+                    <!-- Message -->
+
+                    <div class="custom-form-group">
+
+                        <label for="cakeMessage">
+                            Message on Cake
+                        </label>
+
+                        <input type="text" id="cakeMessage" placeholder="Example: Happy Birthday">
+
+                    </div>
+
+
+                    <!-- Reference Image -->
+
+                    <div class="custom-form-group">
+
+                        <label for="referenceImage">
+                            Upload Reference Image
+                        </label>
+
+                        <input type="file" id="referenceImage" accept="image/*">
+
+                        <small>
+                            Upload an image if you have a cake design in mind.
+                        </small>
+
+                    </div>
+
+
+                    <!-- Delivery Date -->
+
+                    <div class="custom-form-group">
+
+                        <label for="deliveryDate">
+                            Required Date
+                        </label>
+
+                        <input type="date" id="deliveryDate" required>
+
+                    </div>
+
+
+                    <!-- Additional Instructions -->
+
+                    <div class="custom-form-group">
+
+                        <label for="instructions">
+                            Additional Instructions
+                        </label>
+
+                        <textarea id="instructions" rows="5"
+                            placeholder="Tell us anything else you want in your cake..."></textarea>
+
+                    </div>
+
+
+                    <!-- Submit -->
+
+                    <button type="submit" class="custom-cake-button">
+
+                        Submit Custom Cake Request
+
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+            <!-- ==================== Information ==================== -->
+
+            <div class="custom-cake-info">
+
+                <h2>Make It Your Way 🎂</h2>
+
+                <p>
+                    Don't see the cake you are looking for?
+                    No problem. Tell us what you have in mind.
+                </p>
+
+
+                <div class="custom-info-item">
+
+                    <i class="fa-solid fa-palette"></i>
+
+                    <div>
+
+                        <h3>Choose Your Design</h3>
+
+                        <p>
+                            Select your preferred color, shape and theme.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="custom-info-item">
+
+                    <i class="fa-solid fa-image"></i>
+
+                    <div>
+
+                        <h3>Share Your Inspiration</h3>
+
+                        <p>
+                            Upload a reference image of the cake you want.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="custom-info-item">
+
+                    <i class="fa-solid fa-cake-candles"></i>
+
+                    <div>
+
+                        <h3>Choose Your Flavor</h3>
+
+                        <p>
+                            Select the flavor and size that suits your occasion.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="custom-info-item">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <div>
+
+                        <h3>Made For You</h3>
+
+                        <p>
+                            We'll prepare your cake according to your requirements.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="custom-cake-requests">
+
+            <h2>Your Custom Cake Requests</h2>
+
+            <div id="customCakeRequests">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- ==================== Footer ==================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-section">
+
+                <div class="footer-logo">
+
+                    <img src="/Images/Bakery Logo.png" height="65px" alt="Bakery Cakery Logo">
+
+                    <h3>Bakery Cakery</h3>
+
+                </div>
+
+                <p>
+                    Freshly baked cakes, pastries and sweet treats
+                    made with love for every occasion.
+                </p>
+
+            </div>
+
+
+            <div class="footer-section">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">Menu</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About us</a>
+                    </li>
+
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact us</a>
+                    </li>
+
+                    <li>
+                        <a href="cart.html">Cart</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-section">
+
+                <h3>Contact Us</h3>
+
+                <p>
+                    Lingdeo, Akole, Ahilyanagar,
+                    Maharashtra 422610
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 9527791136
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    bakerycakery@gmail.com
+                </p>
+
+            </div>
+
+
+            <div class="footer-section">
+
+                <h3>Follow Us</h3>
+
+                <div class="social-links">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Bakery Cakery.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="/Js/script.js"></script>
+
+</body>
+
+</html>

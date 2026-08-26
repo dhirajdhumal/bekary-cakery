@@ -49,6 +49,10 @@
                 </li>
 
                 <li>
+                    <a href="customcake.html">Custom Cake</a>
+                </li>
+
+                <li>
                     <a href="about.html">About us</a>
                 </li>
 
@@ -64,8 +68,9 @@
                     <a href="cart.html">Cart</a>
                 </li>
 
-                <li><a href="login.html">Login</a></li>
-
+                <li>
+                    <a href="#" id="loginLogout">Login</a>
+                </li>
 
             </ul>
 
@@ -134,141 +139,10 @@
 
                         <!-- Table Body -->
 
-                        <tbody>
+                        <tbody id="cartItems">
 
 
-                            <!-- Cart Item 1 -->
 
-                            <tr>
-
-                                <td class="cart-product">
-
-                                    <img src="/Images/Gallery/Cake1.png" alt="Chocolate Celebration Cake">
-
-                                    <div>
-
-                                        <h3>
-                                            Chocolate Celebration Cake
-                                        </h3>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-                                    ₹650
-                                </td>
-
-
-                                <td>
-
-                                    <div class="table-quantity">
-
-                                        <button type="button">
-                                            -
-                                        </button>
-
-                                        <span>
-                                            1
-                                        </span>
-
-                                        <button type="button">
-                                            +
-                                        </button>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <strong>
-                                        ₹650
-                                    </strong>
-
-                                </td>
-
-
-                                <td>
-
-                                    <button type="button" class="table-remove" aria-label="Remove product">
-
-                                        <i class="fa-solid fa-trash"></i>
-
-                                    </button>
-
-                                </td>
-
-                            </tr>
-
-
-                            <!-- Cart Item 2 -->
-
-                            <tr>
-
-                                <td class="cart-product">
-
-                                    <img src="/Images/Gallery/Pastry1.png" alt="Butter Croissant">
-
-                                    <div>
-
-                                        <h3>
-                                            Butter Croissant
-                                        </h3>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-                                    ₹80
-                                </td>
-
-
-                                <td>
-
-                                    <div class="table-quantity">
-
-                                        <button type="button">
-                                            -
-                                        </button>
-
-                                        <span>
-                                            2
-                                        </span>
-
-                                        <button type="button">
-                                            +
-                                        </button>
-
-                                    </div>
-
-                                </td>
-
-
-                                <td>
-
-                                    <strong>
-                                        ₹160
-                                    </strong>
-
-                                </td>
-
-
-                                <td>
-
-                                    <button type="button" class="table-remove" aria-label="Remove product">
-
-                                        <i class="fa-solid fa-trash"></i>
-
-                                    </button>
-
-                                </td>
-
-                            </tr>
 
 
                         </tbody>
@@ -292,7 +166,6 @@
 
 
             <!-- ==================== Order Summary ==================== -->
-
             <div class="cart-summary">
 
                 <h2>Order Summary</h2>
@@ -304,8 +177,8 @@
                         Subtotal
                     </span>
 
-                    <strong>
-                        ₹810
+                    <strong id="subtotal">
+                        ₹0
                     </strong>
 
                 </div>
@@ -317,8 +190,8 @@
                         Delivery Fee
                     </span>
 
-                    <strong>
-                        ₹50
+                    <strong id="deliveryFee">
+                        ₹0
                     </strong>
 
                 </div>
@@ -333,14 +206,14 @@
                         Total
                     </span>
 
-                    <strong>
-                        ₹860
+                    <strong id="grandTotal">
+                        ₹0
                     </strong>
 
                 </div>
 
 
-                <button type="button" class="checkout-button">
+                <button type="button" class="checkout-button" id="checkoutButton">
 
                     Proceed to Checkout
 
